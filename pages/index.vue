@@ -1,9 +1,16 @@
 <template>
-  <div>asd</div>
+  <div>
+    <PlayListHeaderVue title="Playlist" />
+  </div>
 </template>
 
 <script>
-export default {};
+import PlayListHeaderVue from "~/components/common/PlayListHeader.vue";
+export default {
+  components: {
+    PlayListHeaderVue,
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>
