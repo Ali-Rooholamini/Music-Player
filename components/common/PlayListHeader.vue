@@ -6,6 +6,21 @@
     <strong>
       <span>{{ title }}</span>
     </strong>
+    <div v-if="hasMenuButton" class="play-list-header_menu-btn">
+      <button @click="isMenuOpen = true">
+        <SvgRenderer iconName="menu" :width="10" :height="12" />
+      </button>
+      <ul
+        v-show="isMenuOpen"
+        v-click-outside="
+          () => {
+            isMenuOpen = false;
+          }
+        "
+      >
+        <li><button>Choose Music Folder</button></li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -21,6 +36,17 @@ export default {
       type: String,
       required: true,
     },
+    hasMenuButton: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+  },
+
+  data() {
+    return {
+      isMenuOpen: false,
+    };
   },
 };
 </script>
@@ -29,14 +55,17 @@ export default {
 .play-list-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  strong {
-    width: 100%;
-    > span {
-      display: block;
-      width: 100%;
-      text-align: center;
-      font-size: 14px;
+  .play-list-header_menu-btn {
+    position: relative;
+    ul {
+      background-color: hsla(0, 0%, 32%, 0.5);
+      padding: 5px 10px;
+      position: absolute;
+      top: 35px;
+      right: 5px;
+      min-width: 160px;
     }
   }
 }

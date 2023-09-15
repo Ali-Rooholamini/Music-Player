@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PlayListHeaderVue title="Playlist" />
+    <PlayListHeaderVue title="Playlist" :hasMenuButton="true" />
   </div>
 </template>
 
