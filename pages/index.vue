@@ -1,5 +1,9 @@
 <template>
-  <div>
-    <p>asdasdasdasdsadasd</p>
-  </div>
+  <div>asd</div>
 </template>
+
+<script>
+export default {};
+</script>
+
+<style lang="scss" scoped></style>

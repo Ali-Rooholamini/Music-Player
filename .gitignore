@@ -23,3 +23,6 @@ guide.txt
 .env
 .env.*
 !.env.example
+
+# local music for development
+*.mp3
