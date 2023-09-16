@@ -1,16 +1,23 @@
 <template>
   <div>
-    <PlayListHeaderVue title="Playlist" :hasMenuButton="true" />
+    <PlayListHeader title="Playlist" :hasMenuButton="true" />
+    <PlayList class="playlist" />
   </div>
 </template>
 
 <script>
-import PlayListHeaderVue from "~/components/common/PlayListHeader.vue";
+import PlayListHeader from "~/components/common/PlayListHeader.vue";
+import PlayList from "~/components/page/PlayList.vue";
 export default {
   components: {
-    PlayListHeaderVue,
+    PlayListHeader,
+    PlayList,
   },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.playlist {
+  margin-top: 60px;
+}
+</style>

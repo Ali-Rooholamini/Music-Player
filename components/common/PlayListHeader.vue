@@ -60,6 +60,7 @@ export default {
   .play-list-header_menu-btn {
     position: relative;
     ul {
+      z-index: 100;
       background-color: hsla(0, 0%, 32%, 0.5);
       padding: 5px 10px;
       position: absolute;
