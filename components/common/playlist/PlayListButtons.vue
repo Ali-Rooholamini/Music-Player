@@ -36,12 +36,12 @@ button {
     align-items: center;
     gap: 6px;
     min-width: 60%;
-    background-color: white;
-    color: black;
+    background-color: $color-white;
+    color: $color-black;
     padding-right: 20px;
 
     div svg > path {
-      color: black;
+      color: $color-black;
     }
   }
 
@@ -51,8 +51,8 @@ button {
     align-items: center;
     gap: 6px;
     width: 50%;
-    background-color: black;
-    color: white;
+    background-color: $color-black;
+    color: $color-white;
     position: absolute;
     right: 0;
   }
